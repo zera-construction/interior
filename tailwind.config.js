@@ -1,13 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class", // enable class-based dark mode
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+    darkMode: "class", // enable class-based dark mode
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'Inter'", "sans-serif"], // you can update this later
+        dmSans: ['DM Sans', 'sans-serif'],
+        mozilla: ['Mozilla Text', 'serif'],
       },
     },
   },
   plugins: [],
-};
+}

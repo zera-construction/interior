@@ -157,29 +157,29 @@ const Header = () => {
              backdrop-blur-md 
              border border-white/50 dark:border-white/20
              rounded-3xl shadow-2xl dark:shadow-white/30
-             transition-all duration-500 p-8 z-0"
+             transition-all duration-500 p-8 z-50"
           onClick={() => setIsOpen(false)}
         >
           <div className="grid grid-cols-3 gap-10 text-xl text-black dark:text-white justify-items-center">
-            <button onClick={() => setDarkMode(!darkMode)} className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl dark:shadow-gray-500/20 shadow-xl">
+            <button onClick={() => setDarkMode(!darkMode)} className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl shadow-xl dark:shadow-gray-500/20 hover:scale-110 transition">
               <span className="material-symbols-outlined">
                 {darkMode ? "light_mode" : "dark_mode"}
               </span>
             </button>
 
-            <button className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl shadow-xl dark:shadow-gray-500/20">
+            <button className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl shadow-xl dark:shadow-gray-500/20 hover:scale-110 transition">
               <span class="material-symbols-outlined">
                 language
               </span>
             </button>
-            <button className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl shadow-xl dark:shadow-gray-500/20">
+            <button className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl shadow-xl dark:shadow-gray-500/20 hover:scale-110 transition">
               <span class="material-symbols-outlined">
                 location_on
               </span>
             </button>
 
             {socialIcons.map(({ name, icon, href, color }) => (
-              <button className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl shadow-xl dark:shadow-gray-500/20">
+              <button className="flex justify-center items-center border-2 border-black dark:border-white w-16 h-16 rounded-2xl shadow-xl dark:shadow-gray-500/20 hover:scale-110 transition">
                 <a
                   key={name}
                   href={href}
