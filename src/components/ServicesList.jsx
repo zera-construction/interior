@@ -62,7 +62,7 @@ const ServicesList = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            onMouseEnter={() => setActiveIndex(index)}
+            onMouseEnter={() => setActiveIndex(index)} onMouseLeave={ ()=>setActiveIndex(null)}
             className={`w-full max-w-5xl flex justify-between items-center border-b border-gray-700 py-10 cursor-pointer font-mozilla transition-all duration-500 group ${activeIndex === index ? "text-black dark:text-white" : "text-gray-500"
               }`}
           >
