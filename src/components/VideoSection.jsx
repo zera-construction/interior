@@ -22,7 +22,7 @@ const VideoSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-black text-white px-6 md:px-16 py-12 gap-8 font-sans"
+      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-white dark:bg-black text-white px-6 md:px-16 py-12 gap-8 font-sans"
     >
       {/* Left Content */}
       <motion.div
@@ -30,16 +30,16 @@ const VideoSection = () => {
         className="w-full md:w-1/2 flex flex-col gap-6 items-start"
       >
         <h1 className="text-4xl md:text-6xl font-light leading-snug font-mozilla font-normal">
-          <span className="text-white">Capture</span>{" "}
-          <span className="text-gray-400">the spirit of</span>{" "}
-          <span className="text-white">spring</span>{" "}
-          <span className="text-gray-400">in your home</span>
+          <span className="text-black dark:text-white">Capture</span>{" "}
+          <span className="text-gray-500 dark:text-gray-400">the spirit of</span>{" "}
+          <span className="text-black dark:text-white">spring</span>{" "}
+          <span className="text-gray-500 dark:text-gray-400">in your home</span>
         </h1>
-        <p className="text-gray-400 leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           We provide guidance and direction in your interior design project, inspire
           your space through art and design, create a space that reflects who you are.
         </p>
-        <button className="mt-4 px-6 py-3 border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
+        <button className="mt-4 px-6 py-3 text-black dark:text-white border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
           Learn More <span className="material-symbols-outlined">arrow_forward</span>
         </button>
       </motion.div>
