@@ -17,8 +17,8 @@ const ProjectStats = () => {
 
   useEffect(() => {
     if (isInView) {
-      leftControls.start({ x: 0, opacity: 1, transition: { duration: 1.5, ease: "easeOut" } });
-      rightControls.start({ x: 0, opacity: 1, transition: { duration: 1.5, ease: "easeOut" } });
+      leftControls.start({ x: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } });
+      rightControls.start({ x: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } });
     } else {
       leftControls.start({ x: -100, opacity: 0 });
       rightControls.start({ x: 100, opacity: 0 });
@@ -103,7 +103,7 @@ const ProjectStats = () => {
         </div>
 
         {/* About Button */}
-        <button className="mt-6 px-6 py-3 border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
+        <button className="mt-4 px-6 py-3 border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
           About Us <span className="material-symbols-outlined">arrow_forward</span>
         </button>
       </motion.div>
