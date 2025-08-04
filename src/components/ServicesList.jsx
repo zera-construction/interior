@@ -39,11 +39,11 @@ const ServicesList = () => {
 
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 md:px-16 text-normal">
+    <div ref={sectionRef} className="w-full min-h-screen text-white flex flex-col justify-center items-center px-6 md:px-16 text-normal overflow-hidden py-10">
       <motion.h2
         animate={titleControls}
         initial={{ y: 30, opacity: 0 }}
@@ -63,7 +63,7 @@ const ServicesList = () => {
             key={index}
             variants={itemVariants}
             onMouseEnter={() => setActiveIndex(index)}
-            className={`w-full max-w-4xl flex justify-between items-center border-b border-gray-700 py-10 cursor-pointer font-mozilla transition-all duration-500 group ${activeIndex === index ? "text-white" : "text-gray-500"
+            className={`w-full max-w-5xl flex justify-between items-center border-b border-gray-700 py-10 cursor-pointer font-mozilla transition-all duration-500 group ${activeIndex === index ? "text-black dark:text-white" : "text-gray-500"
               }`}
           >
             <span className="text-xl md:text-2xl">{service.title}</span>
