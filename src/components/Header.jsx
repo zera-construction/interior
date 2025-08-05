@@ -15,6 +15,7 @@ import { IoCall } from "react-icons/io5";
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import zeraWhiteLogo from "/src/assets/logos/zera_white_logo.png";
+import zeraBlackLogo from "../assets/logos/zera_black_logo.png";
 
 
 const Header = () => {
@@ -89,7 +90,7 @@ const Header = () => {
         {darkMode ? (
           <img src={zeraWhiteLogo} alt="Zera Logo" className="w-16" />
         ) : (
-          <img src="/zera_favicon.png" alt="zera" className="w-16" />
+          <img src={zeraBlackLogo} alt="zera" className="w-16" />
         )}
       </div>
 
