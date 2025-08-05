@@ -117,10 +117,10 @@ const HeroSection = () => {
                    bg-gradient-to-r from-gray-400 dark:from-gray-400 to-black dark:to-white 
                    bg-[length:200%_200%] bg-left animate-gradient-x
                    transition-all duration-500 ease-in-out">
-              Start Project <span className="material-symbols-outlined">east</span>
+              Start Project <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
             <button className="px-6 py-3 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-2 hover:scale-105 transition duration-500 ease-in-out">
-              Learn More <span className="material-symbols-outlined">east</span>
+              Learn More <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
           </div>
         </div>
@@ -140,7 +140,7 @@ const HeroSection = () => {
              border border-white/50 dark:border-white/20
              rounded-3xl shadow-2xl dark:shadow-white/30"
             >
-              <span className="material-symbols-outlined">arrow_back</span>
+              <span className="material-symbols-outlined">arrow_back_ios</span>
             </button>
 
             <div className="flex gap-2 overflow-hidden">
@@ -162,7 +162,7 @@ const HeroSection = () => {
              border border-white/50 dark:border-white/20
              rounded-3xl shadow-2xl dark:shadow-white/30"
             >
-              <span className="material-symbols-outlined">arrow_forward</span>
+              <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
           </div>
         </div>

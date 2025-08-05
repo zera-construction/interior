@@ -69,7 +69,7 @@ const GallerySlider = () => {
             {activeIndex === index && (
               <button className="absolute inset-0 flex items-center justify-center">
                 <div className="px-6 py-3 border border-white dark:border-black rounded-full text-sm flex items-center gap-2 bg-black bg-opacity-50 hover:bg-white dark:hover:bg-black hover:text-black dark:hover:text-white transition-all duration-300 hover:gap-4">
-                  Learn More <span className="material-symbols-outlined">arrow_forward</span>
+                  Learn More <span className="material-symbols-outlined">arrow_forward_ios</span>
                 </div>
               </button>
             )}

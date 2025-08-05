@@ -104,7 +104,7 @@ const ProjectStats = () => {
 
         {/* About Button */}
         <button className="mt-4 px-6 py-3 border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
-          About Us <span className="material-symbols-outlined">arrow_forward</span>
+          About Us <span className="material-symbols-outlined">arrow_forward_ios</span>
         </button>
       </motion.div>
     </section>
