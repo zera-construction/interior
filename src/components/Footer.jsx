@@ -59,7 +59,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer ref={ref} className="w-full px-6 md:px-16 py-16 flex flex-col items-center border-t border-gray-500">
+    <footer ref={ref} className="w-full md:px-6 py-16 flex flex-col items-center border-t border-gray-500">
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -68,7 +68,7 @@ const Footer = () => {
       >
         {/* Left Text */}
         <div className="flex-1">
-          <h2 className="text-4xl md:text-5xl font-light leading-snug font-mozilla text-black dark:text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light leading-snug font-mozilla text-black dark:text-white">
             Engage with Us in <span className="text-gray-500 dark:text-gray-400">Conversation.</span>
           </h2>
           <p className="mt-4 text-gray-500 dark:text-gray-400 leading-relaxed max-w-md">
@@ -97,7 +97,7 @@ const Footer = () => {
         variants={fadeUp}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="w-full max-w-7xl mt-16 grid grid-cols-2 md:grid-cols-5 gap-10 text-center md:text-left"
+        className="w-full max-w-7xl mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 text-left"
       >
         {footerLinks.map((section, index) => (
           <div key={index}>
@@ -120,7 +120,7 @@ const Footer = () => {
         ))}
 
         {/* Logo Section */}
-        <div className="md:col-span-1 flex justify-center md:justify-end items-center">
+        <div className="col-span-2 md:col-span-1 flex justify-center md:justify-end items-center">
           <div>
             {/* Light Mode Logo */}
             <img
