@@ -1,5 +1,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import CountUp from "react-countup";
+
 import thumb1 from "../assets/images/thumb-1.webp";
 import thumb2 from "../assets/images/thumb-2.webp";
 import thumb9 from "../assets/images/thumb-9.webp";
@@ -28,7 +30,7 @@ const ProjectStats = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col md:flex-row items-center space-x-0 md:space-x-20 bg-white dark:bg-black text-black dark:text-white px-6 md:px-16 py-12 gap-8 font-mozilla"
+      className="w-full min-h-screen flex flex-col md:flex-row items-center space-x-0 md:space-x-20 text-black dark:text-white px-6 md:px-16 py-12 gap-8 font-mozilla"
     >
       {/* Left Image */}
       <motion.div
@@ -89,15 +91,21 @@ const ProjectStats = () => {
         {/* Stats */}
         <div className="flex gap-6 md:gap-12 font-dmSans">
           <div className="flex flex-col justify-center items-center">
-            <h3 className="text-3xl">300<span className="text-gray-500">+</span></h3>
+            <h3 className="text-3xl">
+              <CountUp start={isInView ? 0 : null} end={99} duration={1.5} /> <span className="text-gray-500">+</span>
+            </h3>
             <p className="text-gray-400 text-xs">Success project</p>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h3 className="text-3xl">200<span className="text-gray-500">+</span></h3>
+            <h3 className="text-3xl">
+              <CountUp start={isInView ? 0 : null} end={199} duration={1.5} /> <span className="text-gray-500">+</span>
+            </h3>
             <p className="text-gray-400 text-xs">Product launches</p>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h3 className="text-3xl">180K</h3>
+            <h3 className="text-3xl transition">
+              <CountUp start={isInView ? 0 : null} end={999} duration={1.5}  /> <span className="text-gray-500">+</span>
+            </h3>
             <p className="text-gray-400 text-xs">Happy customer</p>
           </div>
         </div>

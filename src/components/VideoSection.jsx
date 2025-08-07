@@ -22,7 +22,7 @@ const VideoSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-white dark:bg-black text-white px-6 md:px-16 py-12 gap-8 font-sans"
+      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-6 md:px-16 py-12 gap-8 font-sans"
     >
       {/* Left Content */}
       <motion.div

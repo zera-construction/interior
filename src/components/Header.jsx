@@ -84,7 +84,7 @@ const Header = () => {
   }, [darkMode]);
 
   return (
-    <header className="flex justify-between items-center px-8 py-4 bg-white dark:bg-black text-black dark:text-white transition-all duration-300">
+    <header className="flex justify-between items-center px-8 py-4 text-black dark:text-white transition-all duration-300">
       {/* Logo */}
       <div>
         {darkMode ? (
