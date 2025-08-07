@@ -29,12 +29,12 @@ const VideoSection = () => {
         animate={leftControls}
         className="w-full md:w-1/2 flex flex-col gap-6 items-start"
       >
-        <h1 className="text-4xl sm:text-4xl md:text-4xl lg:text-6xl font-light leading-snug font-mozilla font-normal">
+        <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-6xl font-light leading-snug font-mozilla font-normal">
           <span className="text-black dark:text-white">Capture</span>{" "}
           <span className="text-gray-500 dark:text-gray-400">the spirit of</span>{" "}
           <span className="text-black dark:text-white">spring</span>{" "}
           <span className="text-gray-500 dark:text-gray-400">in your home</span>
-        </h1>
+        </h2>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           We provide guidance and direction in your interior design project, inspire
           your space through art and design, create a space that reflects who you are.
