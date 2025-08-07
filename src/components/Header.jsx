@@ -87,11 +87,8 @@ const Header = () => {
     <header className="flex justify-between items-center px-8 py-4 text-black dark:text-white transition-all duration-300">
       {/* Logo */}
       <div>
-        {darkMode ? (
-          <img src={zeraWhiteLogo} alt="Zera Logo" className="w-16" />
-        ) : (
-          <img src={zeraBlackLogo} alt="zera" className="w-16" />
-        )}
+        <img src={zeraWhiteLogo} alt="Zera Logo" className="w-16 hidden dark:block" />
+        <img src={zeraBlackLogo} alt="zera" className="w-16 block dark:hidden" />
       </div>
 
       {/* Nav Links */}
@@ -112,9 +109,8 @@ const Header = () => {
         {/* Menu Icon */}
         <button className="text-2xl" onClick={() => setIsOpen(!isOpen)}>
           <span
-            className={`material-symbols-outlined transition-transform duration-300 ${
-              isOpen ? "rotate-90" : "rotate-0"
-            }`}
+            className={`material-symbols-outlined transition-transform duration-300 ${isOpen ? "rotate-90" : "rotate-0"
+              }`}
           >
             {isOpen ? "close" : "drag_handle"}
           </span>
