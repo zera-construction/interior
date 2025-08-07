@@ -43,11 +43,11 @@ const ServicesList = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen text-white flex flex-col justify-center items-center px-6 md:px-16 text-normal overflow-hidden py-10">
+    <div ref={sectionRef} className="w-full min-h-screen text-white flex flex-col justify-center items-center sm:px-6 md:px-16 text-normal overflow-hidden py-10">
       <motion.h2
         animate={titleControls}
         initial={{ y: 30, opacity: 0 }}
-        className="text-4xl md:text-8xl leading-tight font-mozilla bg-gradient-to-r from-black to-gray-200 dark:from-gray-500 dark:to-white bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x mb-8"
+        className="text-5xl md:text-8xl leading-tight font-mozilla bg-gradient-to-r from-black to-gray-200 dark:from-gray-500 dark:to-white bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x mb-8"
       >
         Services
       </motion.h2>
@@ -63,10 +63,10 @@ const ServicesList = () => {
             key={index}
             variants={itemVariants}
             onMouseEnter={() => setActiveIndex(index)} onMouseLeave={ ()=>setActiveIndex(null)}
-            className={`w-full max-w-5xl flex justify-between items-center border-b border-gray-700 py-10 cursor-pointer font-mozilla transition-all duration-500 group ${activeIndex === index ? "text-black dark:text-white" : "text-gray-500"
+            className={`w-full flex justify-between items-center border-b border-gray-400 py-10 cursor-pointer font-mozilla transition-all duration-500 group ${activeIndex === index ? "text-black dark:text-white" : "text-gray-500"
               }`}
           >
-            <span className="text-xl md:text-2xl">{service.title}</span>
+            <span className="text-sm md:text-2xl ">{service.title}</span>
 
             {/* Right Icon / Image */}
             <div className="flex items-center space-x-2 relative w-[300px] h-full rounded-2xl">
@@ -74,7 +74,7 @@ const ServicesList = () => {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className={`w-auto h-[100px] object-cover rounded-2xl transition-all duration-500 absolute right-12 ${activeIndex === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5 pointer-events-none"
+                  className={`w-auto h-[100px] object-cover rounded-2xl transition-all duration-500 absolute right-8 sm:right-12 ${activeIndex === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5 pointer-events-none"
                     }`}
                 />
               )}
