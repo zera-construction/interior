@@ -49,7 +49,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative w-full bg-white dark:bg-black text-white flex flex-col"
+      className="relative w-full text-white flex flex-col"
       style={{ height: 'calc(100vh - 70px)' }}
     >
       <div className="absolute w-auto h-auto z-20 top-[14%] right-[20%]">

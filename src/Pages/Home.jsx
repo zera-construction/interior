@@ -12,7 +12,7 @@ import Footer from '../components/Footer.jsx'
 
 function Home() {
   return (
-    <div className='min-h-screen bg-background px-6'>
+    <div className='bg-background px-6 select-none w-[100vw] overflow-hidden'>
       <Header />
       <HeroSection />
       <ProjectStats />
