@@ -85,7 +85,7 @@ const HeroSection = () => {
         drop-shadow-[0_0_30px_rgba(255,255,255,0.8)]"      />
 
 
-      <div className="relative h-full flex flex-col items-start px-6 text-left -mt-8">
+      <div className="relative h-full flex flex-col items-start sm:px-6 text-left -mt-8">
         <motion.h1
           initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -130,7 +130,7 @@ const HeroSection = () => {
         </p>
 
         {/* Image Slider Thumbnails */}
-        <div className="flex w-[50%] justify-center gap-2 mt-8 items-center absolute -bottom-8 left-0 z-30 p-4 right-1/2">
+        <div className="flex w-full sm:w-[50%] justify-center gap-2 mt-8 items-center absolute -bottom-8 left-0 z-30 p-4 right-1/2">
           <div className='flex items-center justify-center relative'>
             <button
               onClick={handlePrev}
