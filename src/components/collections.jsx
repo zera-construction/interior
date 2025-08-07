@@ -23,21 +23,28 @@ const fadeUp = {
 
 const ProudlyCollection = () => {
     return (
-        <section className="w-full px-6 md:px-16 py-20">
+        <section className="w-full sm:px-6 md:px-16 py-20">
             {/* Header Section */}
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
                 <div>
-                    <h2 className="text-4xl md:text-5xl font-semibold font-mozilla leading-tight">Explore Our Proudly Collection</h2>
-                    <p className="text-gray-600 mt-4 max-w-md">
-                        Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile. Milano 2024.
-                    </p>
+                    <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-6xl font-light leading-snug font-mozilla font-normal">
+                        <span className="text-black dark:text-white">Explore</span>{" "}
+                        <span className="text-gray-500 dark:text-gray-400">Our</span>{" "}
+                        <span className="text-black dark:text-white">Proudly</span>{" "}
+                        <span className="text-gray-500 dark:text-gray-400">Collection</span>
+                    </h2>
+                    <div className="hidden sm:block">
+                        <p className="text-gray-600 mt-4 max-w-md">
+                            Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile. Milano 2024.
+                        </p>
+                        <button className="mt-4 px-6 py-3 text-black dark:text-white border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
+                            View More <span className="material-symbols-outlined">arrow_forward_ios</span>
+                        </button>
+                    </div>
                 </div>
-                <button className="mt-4 px-6 py-3 text-black dark:text-white border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
-                    View More <span className="material-symbols-outlined">arrow_forward_ios</span>
-                </button>
             </div>
 
-            <div className="max-w-7xl mx-auto columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
+            <div className="max-w-7xl mx-auto columns-2 lg:columns-4 gap-2 sm:gap-6 space-y-4 sm:space-y-6">
                 {collections.map((item, index) => (
                     <motion.div
                         key={index}
@@ -55,19 +62,26 @@ const ProudlyCollection = () => {
                             <img
                                 src={item.img}
                                 alt={item.name}
-                                style={{ height: item.height }}
-                                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                                className={`w-full object-cover group-hover:scale-105 transition-transform duration-500 h-48 sm:h-[${item.height}]`}
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition" />
-                            <div className="absolute bottom-4 left-4 flex items-center justify-between w-[85%]">
-                                <span className="text-white text-lg font-mozilla">{item.name}</span>
-                                <span className="material-symbols-outlined w-8 h-8 flex items-center justify-center rounded-full bg-white text-black text-xl transition group-hover:rotate-[-40deg]">
+                            <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 flex items-center justify-between w-[85%]">
+                                <span className="text-white text:sm sm:text-lg font-mozilla">{item.name}</span>
+                                <span className="material-symbols-outlined w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-white text-black text-sm sm:text-xl transition group-hover:rotate-[-40deg]">
                                     arrow_forward_ios
                                 </span>
                             </div>
                         </a>
                     </motion.div>
                 ))}
+            </div>
+            <div className="sm:hidden flex flex-col items-end text-end">
+                <p className="text-gray-600 mt-4 max-w-md">
+                    Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile. Milano 2024.
+                </p>
+                <button className="mt-4 px-6 py-3 text-black dark:text-white border border-black dark:border-white rounded-full flex items-center gap-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition hover:gap-4 transition-all duration-300 ease-in-out mr-2 hover:mr-0">
+                    View More <span className="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
             </div>
 
 
