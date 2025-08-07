@@ -45,10 +45,10 @@ const GallerySlider = () => {
     <section ref={ref} className="w-full min-h-screen text-white flex flex-col items-center justify-center sm:px-6 md:px-16">
       {/* Title Section */}
       <motion.div animate={titleControls} initial={{ y: 30, opacity: 0 }} className="w-full flex justify-between items-center mb-6 sm:mb-10">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl leading-snug font-mozilla sm:text-center md:text-start">
-          <span className="bg-gradient-to-r from-black to-gray-200 dark:from-gray-500 dark:to-white bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x mb-8">Decorate</span>{" "}
+        <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-light leading-snug font-mozilla font-normal">
+          <span className="text-black dark:text-white">Decorate</span>{" "}
+          <span className="text-gray-500 dark:text-gray-400">to make it feel homey</span>{" "}
           <span className="text-black dark:text-white">every inch of the house</span>{" "}
-          <span className="bg-gradient-to-r from-black to-gray-200 dark:from-gray-500 dark:to-white bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x mb-8">to make it feel homey</span>
         </h2>
         <p className="hidden md:block text-gray-600 dark:text-gray-400 text-center sm:text-right max-w-[300px] leading-relaxed text-sm">
           Carve out a little piece of paradise with some of our top picks, the home of your dreams begins with the perfect palette for every room.
