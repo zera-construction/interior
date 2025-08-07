@@ -22,14 +22,14 @@ const VideoSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-6 md:px-16 py-12 gap-8 font-sans"
+      className="w-full min-h-screen flex flex-col-reverse sm:flex-col md:flex-row items-center justify-center text-white sm:px-6 md:px-16 py-12 gap-8 font-sans"
     >
       {/* Left Content */}
       <motion.div
         animate={leftControls}
         className="w-full md:w-1/2 flex flex-col gap-6 items-start"
       >
-        <h1 className="text-4xl md:text-6xl font-light leading-snug font-mozilla font-normal">
+        <h1 className="text-4xl sm:text-4xl md:text-4xl lg:text-6xl font-light leading-snug font-mozilla font-normal">
           <span className="text-black dark:text-white">Capture</span>{" "}
           <span className="text-gray-500 dark:text-gray-400">the spirit of</span>{" "}
           <span className="text-black dark:text-white">spring</span>{" "}
