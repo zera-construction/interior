@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import thumb1 from '../assets/images/thumb-1.webp';
 import thumb2 from '../assets/images/thumb-2.webp';
@@ -10,7 +10,7 @@ import thumb6 from '../assets/images/thumb-6.webp';
 import thumb7 from '../assets/images/thumb-7.webp';
 import thumb8 from '../assets/images/thumb-8.webp';
 import thumb9 from '../assets/images/thumb-9.webp';
-import thumb10 from '../assets/images/thumb-10.webp'
+import thumb10 from '../assets/images/thumb-10.webp';
 
 
 const HeroSection = () => {
@@ -29,11 +29,27 @@ const HeroSection = () => {
   ];
 
   const [startIndex, setStartIndex] = useState(0);
-  const [mainThumbm, setMainThumb] = useState(thumbnails[0])
+  const [mainThumb, setMainThumb] = useState(thumbnails[0]);
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  // Update visible thumbnails count based on viewport width
+  useEffect(() => {
+    const computeVisible = () => {
+      if (typeof window === 'undefined') return 4;
+      const width = window.innerWidth;
+      if (width < 480) return 2;
+      if (width < 768) return 3;
+      return 4;
+    };
+    const apply = () => setVisibleCount(computeVisible());
+    apply();
+    window.addEventListener('resize', apply);
+    return () => window.removeEventListener('resize', apply);
+  }, []);
 
   const handlePrev = () => {
     setStartIndex((prev) => {
-      const newIndex = prev === 0 ? thumbnails.length - 4 : prev - 1;
+      const newIndex = prev === 0 ? thumbnails.length - visibleCount : prev - 1;
       setMainThumb(thumbnails[newIndex]);
       return newIndex;
     });
@@ -41,7 +57,7 @@ const HeroSection = () => {
 
   const handleNext = () => {
     setStartIndex((prev) => {
-      const newIndex = (prev + 4 >= thumbnails.length) ? 0 : prev + 1;
+      const newIndex = (prev + visibleCount >= thumbnails.length) ? 0 : prev + 1;
       setMainThumb(thumbnails[newIndex]);
       return newIndex;
     });
@@ -52,11 +68,11 @@ const HeroSection = () => {
       className="relative w-full text-white flex flex-col"
       style={{ height: 'calc(100vh - 70px)' }}
     >
-      <div className="absolute w-auto h-auto z-20 top-[14%] right-[20%]">
+      <div className="absolute z-20 top-24 right-4 sm:top-20 sm:right-10 md:top-[14%] md:right-[20%]">
         <motion.img
-          src={mainThumbm}
+          src={mainThumb}
           alt="Interior Design Room"
-          className="w-[300px] h-full object-cover rounded-3xl shadow-xl"
+          className="w-56 sm:w-64 md:w-72 lg:w-[300px] h-auto object-cover rounded-3xl shadow-xl"
           animate={{
             y: [0, -10, 0],
           }}
@@ -80,17 +96,17 @@ const HeroSection = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-4 right-24 w-24 h-24 rounded-full 
-        bg-gradient-to-br from-gray-400 via-white-400 to-gray-200 blur-md
+        className="absolute top-4 right-6 sm:right-16 md:right-24 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full 
+        bg-gradient-to-br from-gray-400 via-white to-gray-200 blur-md
         drop-shadow-[0_0_30px_rgba(255,255,255,0.8)]"      />
 
 
-      <div className="relative h-full flex flex-col items-start sm:px-6 text-left -mt-8">
+      <div className="relative h-full flex flex-col items-start px-4 sm:px-6 text-left -mt-8">
         <motion.h1
           initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 3, ease: 'easeInOut' }}
-          className="absolute text-6xl md:text-[130px] leading-tight font-mozilla z-10
+          className="absolute text-5xl sm:text-6xl md:text-[130px] leading-tight font-mozilla z-10
              bg-gradient-to-r from-black to-gray-200 dark:from-gray-500 dark:to-white 
              bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
         >
@@ -101,7 +117,7 @@ const HeroSection = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 3, ease: 'easeInOut' }}
-          className="absolute text-6xl md:text-[130px] leading-tight font-mozilla mt-28 z-30
+          className="absolute text-5xl sm:text-6xl md:text-[130px] leading-tight font-mozilla mt-24 sm:mt-28 z-30
              bg-gradient-to-l from-black to-gray-300 dark:from-gray-500 dark:to-white 
              bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
         >
@@ -109,28 +125,28 @@ const HeroSection = () => {
         </motion.h1>
 
 
-        <div className="flex w-[55%] justify-between items-center absolute bottom-[25%] z-30 ml-5">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:w-[55%] justify-between items-start md:items-center absolute bottom-24 md:bottom-[25%] z-30 ml-0 md:ml-5">
           <p className="text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
-          <div className='flex gap-6'>
-            <button className="px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105
+          <div className='flex gap-4 md:gap-6'>
+            <button className="px-5 sm:px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105
                    text-white dark:text-black
                    bg-gradient-to-r from-gray-400 dark:from-gray-400 to-black dark:to-white 
                    bg-[length:200%_200%] bg-left animate-gradient-x
                    transition-all duration-500 ease-in-out">
               Start Project <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
-            <button className="px-6 py-3 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-2 hover:scale-105 transition duration-500 ease-in-out">
+            <button className="px-5 sm:px-6 py-3 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-2 hover:scale-105 transition duration-500 ease-in-out">
               Learn More <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
           </div>
         </div>
 
-        <p className="max-w-md text-gray-400 dark:text-gray-200 absolute bottom-1/3 right-0 w-60 z-30">
+        <p className="hidden md:block max-w-md text-gray-400 dark:text-gray-200 absolute bottom-1/3 right-0 w-60 z-30">
           The mind creates the beautiful, the heart creates the home, home sweet home
         </p>
 
         {/* Image Slider Thumbnails */}
-        <div className="flex w-full sm:w-[50%] justify-center gap-2 mt-8 items-center absolute -bottom-8 left-0 z-30 p-4 right-1/2">
+        <div className="flex w-full sm:w-[60%] md:w-[50%] justify-center gap-2 mt-8 items-center absolute bottom-4 sm:-bottom-8 left-0 z-30 px-2 sm:p-4 right-1/2">
           <div className='flex items-center justify-center relative'>
             <button
               onClick={handlePrev}
@@ -144,14 +160,18 @@ const HeroSection = () => {
             </button>
 
             <div className="flex gap-2 overflow-hidden">
-              {thumbnails.slice(startIndex, startIndex + 4).map((thumb, index) => (
-                <img
-                  key={index}
-                  src={thumb}
-                  alt={`Thumbnail ${index}`}
-                  className="w-20 h-full object-cover rounded-lg"
-                />
-              ))}
+              {Array.from({ length: visibleCount }, (_, i) => {
+                const index = (startIndex + i) % thumbnails.length;
+                const thumb = thumbnails[index];
+                return (
+                  <img
+                    key={index}
+                    src={thumb}
+                    alt={`Thumbnail ${index}`}
+                    className="w-16 sm:w-20 h-full object-cover rounded-lg"
+                  />
+                );
+              })}
             </div>
 
             <button
