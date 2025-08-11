@@ -55,7 +55,7 @@ const ProjectStats = () => {
       {/* Left Image */}
       <motion.div
         animate={leftControls}
-        className="w-full h-auto md:w-1/2 flex justify-center items-center relative bg-"
+        className="w-full h-auto md:w-1/2 flex justify-center md:justify-start items-center relative bg-"
         onClick={() => setCartClick((prev) => !prev)}
       >
         <div className="relative w-full max-w-[300px] h-[300px] rounded-3xl shadow-2xl w-full flex justify-center items-center">
@@ -109,7 +109,7 @@ const ProjectStats = () => {
         </h2>
 
         {/* Stats */}
-        <div className="flex gap-6 md:gap-12 font-dmSans hidden sm:block items-center">
+        <div className="hidden sm:flex flex-row gap-12 font-dmSans hidden sm:block items-center">
           <div className="flex flex-col justify-center items-center">
             <h3 className="text-2xl sm:text-3xl">
               <CountUp start={isInView ? 0 : null} end={99} duration={1.5} /> <span className="text-gray-500">+</span>
