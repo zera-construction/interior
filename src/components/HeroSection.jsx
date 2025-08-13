@@ -68,7 +68,7 @@ const HeroSection = () => {
       className="relative w-full text-white flex flex-col"
       style={{ height: 'calc(100vh - 70px)' }}
     >
-      <div className="absolute z-20 top-16  sm:top-20 sm:right-10 md:top-[14%] md:right-[20%]">
+      <div className="absolute z-20 top-16 sm:top-20 sm:right-10 md:top-[14%] md:right-[20%]">
         <motion.img
           src={mainThumb}
           alt="Interior Design Room"
@@ -106,7 +106,7 @@ const HeroSection = () => {
           initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 3, ease: 'easeInOut' }}
-          className="absolute text-5xl sm:text-6xl md:text-[130px] leading-tight font-mozilla z-10
+          className="absolute text-[58px] sm:text-6xl md:text-[130px] text-semi leading-tight font-mozilla z-10
              bg-gradient-to-r from-black to-gray-200 dark:from-gray-500 dark:to-white 
              bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
         >
@@ -117,7 +117,7 @@ const HeroSection = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 3, ease: 'easeInOut' }}
-          className="absolute text-5xl sm:text-6xl md:text-[130px] leading-tight font-mozilla mt-16 sm:mt-28 z-30
+          className="absolute text-[58px] sm:text-6xl md:text-[130px] leading-tight font-mozilla mt-12 sm:mt-28 z-30
              bg-gradient-to-l from-black to-gray-300 dark:from-gray-500 dark:to-white 
              bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
         >
@@ -126,7 +126,7 @@ const HeroSection = () => {
 
         <p className="sm:hidden absolute rotate-90 top-48 -right-12 text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
 
-        <div className="flex flex-col md:flex-row md:gap-6 w-full md:w-[55%] justify-between items-start md:items-center absolute bottom-[6%] md:bottom-[25%] z-30 ml-0 md:ml-5">
+        <div className="flex flex-col md:flex-row md:gap-6 w-full md:w-[55%] justify-between items-start md:items-center absolute bottom-[10%] md:bottom-[25%] z-30 ml-0 md:ml-5">
           <p className="hidden sm:block text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
           <div className='flex max-sm:flex-col gap-4 md:gap-6 w-full'>
             <button className="flex justify-between px-6 py-4 sm:px-6 sm:py-3 rounded-full flex items-center gap-6 sm:gap-2 hover:scale-105
@@ -147,7 +147,7 @@ const HeroSection = () => {
         </p>
 
         {/* Image Slider Thumbnails */}
-        <div className="flex w-full sm:w-[60%] md:w-[50%] justify-center gap-2 mt-8 items-center absolute bottom-[30%] sm:-bottom-8 left-0 z-30 px-2 sm:p-4 right-1/2">
+        <div className="flex w-full sm:w-[60%] md:w-[50%] justify-center gap-2 mt-8 items-center absolute bottom-[33%] sm:-bottom-8 left-0 z-30 px-2 sm:p-4 right-1/2">
           <div className='max-sm:w-full flex items-center justify-center relative'>
             <button
               onClick={handlePrev}
