@@ -50,7 +50,7 @@ const GallerySlider = () => {
           <span className="text-gray-500 dark:text-gray-400">to make it feel homey</span>{" "}
           <span className="text-black dark:text-white">every inch of the house</span>{" "}
         </h2>
-        <p className="hidden md:block text-gray-600 dark:text-gray-400 text-center sm:text-right max-w-[300px] leading-relaxed text-sm">
+        <p className="hidden md:block text-gray-600 dark:text-gray-400 sm:text-right max-w-[300px] leading-relaxed text-sm">
           Carve out a little piece of paradise with some of our top picks, the home of your dreams begins with the perfect palette for every room.
         </p>
       </motion.div>
@@ -79,7 +79,7 @@ const GallerySlider = () => {
       </motion.div>
 
       {/* Mobile Text */}
-      <p className="md:hidden text-gray-400 text-end mt-6 text-sm max-w-md">
+      <p className="md:hidden text-gray-400 text-center mt-6 text-sm max-w-md">
         Carve out a little piece of paradise with some of our top picks, the home of your dreams begins with the perfect palette for every room.
       </p>
     </section>

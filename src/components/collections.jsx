@@ -75,7 +75,7 @@ const ProudlyCollection = () => {
                     </motion.div>
                 ))}
             </div>
-            <div className="sm:hidden flex flex-col items-end text-end">
+            <div className="sm:hidden flex flex-col items-start text-sart">
                 <p className="text-gray-600 mt-4 max-w-md">
                     Poliform will showcase its vision of contemporary architecture, interior design trends, and innovative living at Salone del Mobile. Milano 2024.
                 </p>
