@@ -101,7 +101,7 @@ const HeroSection = () => {
         drop-shadow-[0_0_30px_rgba(255,255,255,0.8)]"      />
 
 
-      <div className="relative h-full flex flex-col items-start px-4 sm:px-6 text-left  sm:-mt-8">
+      <div className="relative h-full flex flex-col items-start sm:px-6 text-left sm:-mt-8">
         <motion.h1
           initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -126,17 +126,17 @@ const HeroSection = () => {
 
         <p className="sm:hidden absolute rotate-90 top-48 -right-12 text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
 
-        <div className="flex flex-col md:flex-row md:gap-6 md:w-[55%] justify-between items-start md:items-center absolute bottom-36 md:bottom-[25%] z-30 ml-0 md:ml-5">
+        <div className="flex flex-col md:flex-row md:gap-6 w-full md:w-[55%] justify-between items-start md:items-center absolute bottom-[6%] md:bottom-[25%] z-30 ml-0 md:ml-5">
           <p className="hidden sm:block text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
-          <div className='flex max-sm:flex-col gap-4 md:gap-6'>
-            <button className="px-6 py-4 sm:px-6 sm:py-3 rounded-full flex items-center gap-6 sm:gap-2 hover:scale-105
+          <div className='flex max-sm:flex-col gap-4 md:gap-6 w-full'>
+            <button className="flex justify-between px-6 py-4 sm:px-6 sm:py-3 rounded-full flex items-center gap-6 sm:gap-2 hover:scale-105
                    text-white dark:text-black
                    bg-gradient-to-r from-gray-400 dark:from-gray-400 to-black dark:to-white 
                    bg-[length:200%_200%] bg-left animate-gradient-x
                    transition-all duration-500 ease-in-out">
               Start Project <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
-            <button className="px-6 py-4  sm:px-6 sm:py-3 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-6 sm:gap-2 hover:scale-105 transition duration-500 ease-in-out">
+            <button className="flex justify-between px-6 py-4 w-full sm:px-6 sm:py-3 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-6 sm:gap-2 hover:scale-105 transition duration-500 ease-in-out">
               Learn More <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
           </div>
@@ -147,7 +147,7 @@ const HeroSection = () => {
         </p>
 
         {/* Image Slider Thumbnails */}
-        <div className="flex w-full sm:w-[60%] md:w-[50%] justify-center gap-2 mt-8 items-center absolute bottom-[5%] sm:-bottom-8 left-0 z-30 px-2 sm:p-4 right-1/2">
+        <div className="flex w-full sm:w-[60%] md:w-[50%] justify-center gap-2 mt-8 items-center absolute bottom-[30%] sm:-bottom-8 left-0 z-30 px-2 sm:p-4 right-1/2">
           <div className='max-sm:w-full flex items-center justify-center relative'>
             <button
               onClick={handlePrev}
