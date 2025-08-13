@@ -38,7 +38,7 @@ const HeroSection = () => {
       if (typeof window === 'undefined') return 4;
       const width = window.innerWidth;
       if (width < 480) return 4;
-      if (width < 768) return 3;
+      if (width < 768) return 5;
       return 4;
     };
     const apply = () => setVisibleCount(computeVisible());
@@ -65,14 +65,14 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative w-full text-white flex flex-col"
+      className="relative w-full text-white flex flex-col sm:max-h-[600px]"
       style={{ height: 'calc(100vh - 70px)' }}
     >
       <div className="absolute z-20 top-16 sm:top-20 sm:right-10 md:top-[14%] md:right-[20%]">
         <motion.img
           src={mainThumb}
           alt="Interior Design Room"
-          className="w-56 sm:w-64 md:w-72 lg:w-[300px] h-auto object-cover rounded-3xl shadow-xl"
+          className="w-[75vw] max-h-[60vh]  md:w-72 h-auto object-cover rounded-3xl shadow-xl"
           animate={{
             y: [0, -10, 0],
           }}
@@ -106,7 +106,7 @@ const HeroSection = () => {
           initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 3, ease: 'easeInOut' }}
-          className="absolute text-[58px] sm:text-6xl md:text-[130px] text-semi leading-tight font-mozilla z-10
+          className="absolute text-[16vw] md:text-[12vw] text-semi leading-tight font-mozilla z-10
              bg-gradient-to-r from-black to-gray-200 dark:from-gray-500 dark:to-white 
              bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
         >
@@ -117,26 +117,26 @@ const HeroSection = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 3, ease: 'easeInOut' }}
-          className="absolute text-[58px] sm:text-6xl md:text-[130px] leading-tight font-mozilla mt-16 sm:mt-28 z-30
+          className="absolute text-[16vw] md:text-[12vw] leading-tight font-mozilla mt-16 sm:mt-28 z-30
              bg-gradient-to-l from-black to-gray-300 dark:from-gray-500 dark:to-white 
              bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
         >
           your space
         </motion.h1>
 
-        <p className="sm:hidden absolute rotate-90 top-52 -right-12 text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
+        <p className="sm:hidden absolute rotate-90 top-52 -right-16 text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
 
-        <div className="flex flex-col md:flex-row md:gap-6 w-full md:w-[55%] justify-between items-start md:items-center absolute bottom-[8%] md:bottom-[25%] z-30 ml-0 md:ml-5">
+        <div className="flex flex-col md:flex-row md:gap-6 w-full md:min-w-[55vw] max-w-[60vw] justify-between items-start md:items-center absolute bottom-[8%] md:bottom-[25%] z-30 ml-0 md:ml-5">
           <p className="hidden sm:block text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
-          <div className='flex max-sm:flex-col gap-2 md:gap-6 w-full'>
-            <button className="sm:flex justify-between px-6 py-3 sm:px-6 rounded-full flex items-center gap-6 sm:gap-2 sm:hover:scale-105
+          <div className='flex max-sm:flex-col gap-2 md:gap-6 max-sm:w-full'>
+            <button className="max-sm:flex max-sm:justify-between px-6 py-3 sm:px-6 rounded-full flex items-center gap-6 sm:gap-2 sm:hover:scale-105
                    text-white dark:text-black
                    bg-gradient-to-r from-gray-400 dark:from-gray-400 to-black dark:to-white 
                    bg-[length:200%_200%] bg-left animate-gradient-x
                    transition-all duration-500 ease-in-out">
               Start Project <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
-            <button className="sm:flex justify-between px-6 py-3 w-full sm:px-6 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-6 sm:gap-2 sm:hover:scale-105 transition duration-500 ease-in-out">
+            <button className="max-sm:flex max-sm:justify-between px-6 py-3 max-sm:w-full sm:px-6 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-6 sm:gap-10 sm:hover:scale-105 transition duration-500 ease-in-out">
               Learn More <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
           </div>
@@ -148,7 +148,7 @@ const HeroSection = () => {
 
         {/* Image Slider Thumbnails */}
         <div className="flex w-full sm:w-[60%] md:w-[50%] justify-center gap-2 mt-8 items-center absolute bottom-[33%] sm:-bottom-8 left-0 z-30 px-2 sm:p-4 right-1/2">
-          <div className='max-sm:w-full flex items-center justify-center relative'>
+          <div className=' flex items-center justify-center relative'>
             <button
               onClick={handlePrev}
               className="w-14 h-8 flex items-center justify-center absolute -left-7 p-2 border border-black dark:border-white rounded-full hover:bg-gray-500/20  dark:hover:text-black transition bg-black/20 dark:bg-white/10
