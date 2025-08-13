@@ -30,7 +30,7 @@ const ProjectStats = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full min-h-screen flex flex-col sm:flex-row items-center md:space-x-20 text-black dark:text-white sm:px-6 md:px-16 py-12 gap-8 font-mozilla"
+      className="w-full  flex flex-col sm:flex-row items-center md:space-x-20 text-black dark:text-white sm:px-6 md:px-16 py-12 gap-8 font-mozilla"
     >
       <div className="flex gap-6 md:gap-12 font-dmSans block sm:hidden">
         <div className="flex flex-col justify-center items-center text-center">

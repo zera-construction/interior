@@ -33,7 +33,7 @@ const StartProject = () => {
    const [showButton, setShowButton] = useState(false);
 
   return (
-    <section ref={ref} className="w-full min-h-screen text-white flex flex-col items-center justify-center px-6 md:px-16 relative font-mozilla mb-10">
+    <section ref={ref} className="w-full min-h-[500px] text-white flex flex-col items-center justify-center px-6 md:px-16 relative font-mozilla mb-10">
 
       {/* Big Heading */}
       <motion.h1
@@ -54,12 +54,12 @@ const StartProject = () => {
         animate={controls}
         className="w-auto max-w-6xl absolute top-28 z-20"
       >
-        <div className="relative"
+        <div className="relative flex justify-center"
           onMouseEnter={() => setShowButton(true)} onMouseLeave={() => setShowButton(false)}>
           <img
             src="https://img.freepik.com/premium-photo/room-with-couch-lamp-table_1288816-3764.jpg?semt=ais_hybrid&w=740"
             alt="Project Interior"
-            className="w-full rounded-3xl object-cover"
+            className="w-[90%] rounded-3xl object-cover"
           />
           {showButton && (
             <button className="absolute inset-0 flex items-center justify-center">

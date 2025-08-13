@@ -43,7 +43,7 @@ const ServicesList = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen text-white flex flex-col justify-center items-center sm:px-6 md:px-16 text-normal overflow-hidden py-10">
+    <div ref={sectionRef} className="w-full text-white flex flex-col justify-center items-center sm:px-6 md:px-16 text-normal overflow-hidden py-10">
       <motion.h2
         animate={titleControls}
         initial={{ y: 30, opacity: 0 }}

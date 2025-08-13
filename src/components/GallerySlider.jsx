@@ -42,7 +42,7 @@ const GallerySlider = () => {
   };
 
   return (
-    <section ref={ref} className="w-full min-h-screen text-white flex flex-col items-center justify-center sm:px-6 md:px-16">
+    <section ref={ref} className="w-full text-white flex flex-col items-center justify-center sm:px-6 md:px-16">
       {/* Title Section */}
       <motion.div animate={titleControls} initial={{ y: 30, opacity: 0 }} className="w-full flex justify-between items-center mb-6 sm:mb-10">
         <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-light leading-snug font-mozilla font-normal">
