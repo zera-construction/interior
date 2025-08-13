@@ -37,7 +37,7 @@ const HeroSection = () => {
     const computeVisible = () => {
       if (typeof window === 'undefined') return 4;
       const width = window.innerWidth;
-      if (width < 480) return 2;
+      if (width < 480) return 4;
       if (width < 768) return 3;
       return 4;
     };
@@ -68,7 +68,7 @@ const HeroSection = () => {
       className="relative w-full text-white flex flex-col"
       style={{ height: 'calc(100vh - 70px)' }}
     >
-      <div className="absolute z-20 top-24 right-4 sm:top-20 sm:right-10 md:top-[14%] md:right-[20%]">
+      <div className="absolute z-20 top-16  sm:top-20 sm:right-10 md:top-[14%] md:right-[20%]">
         <motion.img
           src={mainThumb}
           alt="Interior Design Room"
@@ -96,12 +96,12 @@ const HeroSection = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-4 right-6 sm:right-16 md:right-24 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full 
+        className="absolute top-6 sm:top-4 right-0 right-2 sm:right-6 sm:right-16 md:right-24 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full 
         bg-gradient-to-br from-gray-400 via-white to-gray-200 blur-md
         drop-shadow-[0_0_30px_rgba(255,255,255,0.8)]"      />
 
 
-      <div className="relative h-full flex flex-col items-start px-4 sm:px-6 text-left -mt-8">
+      <div className="relative h-full flex flex-col items-start px-4 sm:px-6 text-left  sm:-mt-8">
         <motion.h1
           initial={{ x: 150, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -117,25 +117,26 @@ const HeroSection = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 3, ease: 'easeInOut' }}
-          className="absolute text-5xl sm:text-6xl md:text-[130px] leading-tight font-mozilla mt-24 sm:mt-28 z-30
+          className="absolute text-5xl sm:text-6xl md:text-[130px] leading-tight font-mozilla mt-16 sm:mt-28 z-30
              bg-gradient-to-l from-black to-gray-300 dark:from-gray-500 dark:to-white 
              bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x"
         >
           your space
         </motion.h1>
 
+        <p className="sm:hidden absolute rotate-90 top-48 -right-12 text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
 
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:w-[55%] justify-between items-start md:items-center absolute bottom-24 md:bottom-[25%] z-30 ml-0 md:ml-5">
-          <p className="text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:w-[55%] justify-between items-start md:items-center absolute bottom-36 md:bottom-[25%] z-30 ml-0 md:ml-5">
+          <p className="hidden sm:block text-gray-800 dark:text-gray-400">Design & Build Experts <br /> Since 2020</p>
           <div className='flex gap-4 md:gap-6'>
-            <button className="px-5 sm:px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105
+            <button className="px-4 sm:px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105
                    text-white dark:text-black
                    bg-gradient-to-r from-gray-400 dark:from-gray-400 to-black dark:to-white 
                    bg-[length:200%_200%] bg-left animate-gradient-x
                    transition-all duration-500 ease-in-out">
               Start Project <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
-            <button className="px-5 sm:px-6 py-3 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-2 hover:scale-105 transition duration-500 ease-in-out">
+            <button className="px-4 sm:px-6 py-3 border-2 border-gray-400 dark:border-white text-gray-400 dark:text-white rounded-full flex items-center gap-2 hover:scale-105 transition duration-500 ease-in-out">
               Learn More <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
           </div>
@@ -147,7 +148,7 @@ const HeroSection = () => {
 
         {/* Image Slider Thumbnails */}
         <div className="flex w-full sm:w-[60%] md:w-[50%] justify-center gap-2 mt-8 items-center absolute bottom-4 sm:-bottom-8 left-0 z-30 px-2 sm:p-4 right-1/2">
-          <div className='flex items-center justify-center relative'>
+          <div className='max-sm:w-full flex items-center justify-center relative'>
             <button
               onClick={handlePrev}
               className="w-14 h-8 flex items-center justify-center absolute -left-7 p-2 border border-black dark:border-white rounded-full hover:bg-gray-500/20  dark:hover:text-black transition bg-black/20 dark:bg-white/10
@@ -159,7 +160,7 @@ const HeroSection = () => {
               <span className="material-symbols-outlined">arrow_back_ios</span>
             </button>
 
-            <div className="flex gap-2 overflow-hidden">
+            <div className="flex gap-2 overflow-hidden w-full">
               {Array.from({ length: visibleCount }, (_, i) => {
                 const index = (startIndex + i) % thumbnails.length;
                 const thumb = thumbnails[index];
